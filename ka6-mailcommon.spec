@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.1
+%define		kdeappsver	25.08.2
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		mailcommon
 Summary:	mailcommon
 Name:		ka6-%{kaname}
-Version:	25.08.1
+Version:	25.08.2
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	aefaf40bd163c5df6beb29f0911ee398
+# Source0-md5:	222f4e12bbe04c703a15add20a4987a8
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Core-devel >= %{qtver}
