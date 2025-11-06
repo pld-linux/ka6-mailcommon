@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		mailcommon
 Summary:	mailcommon
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	222f4e12bbe04c703a15add20a4987a8
+# Source0-md5:	cb3850f1448f43c5fceb43fc028908e5
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -112,9 +112,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libKPim6MailCommon.so.*.*
+%{_libdir}/libKPim6MailCommon.so.*.*
 %ghost %{_libdir}/libKPim6MailCommon.so.6
-%attr(755,root,root) %{_libdir}/qt6/plugins/designer/mailcommon6widgets.so
+%{_libdir}/qt6/plugins/designer/mailcommon6widgets.so
 %{_datadir}/qlogging-categories6/mailcommon.categories
 %{_datadir}/qlogging-categories6/mailcommon.renamecategories
 
